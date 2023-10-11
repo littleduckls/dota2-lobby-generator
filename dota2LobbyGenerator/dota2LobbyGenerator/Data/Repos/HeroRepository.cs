@@ -49,6 +49,11 @@ namespace dota2LobbyGenerator.Data.Repos
             return _dataContext.Heroes.AsNoTracking().FirstOrDefaultAsync(h => h.Id == id);
         }
 
+        public Task<List<Hero>> GetHeroesByAtribute(string atribute)
+        {
+            return _dataContext.Heroes.Where(h => h.Atribute.ToLower() == atribute.ToLower()).ToListAsync();
+        }
+
         public async Task Update(Hero hero)
         {
             try

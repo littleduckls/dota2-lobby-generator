@@ -9,6 +9,7 @@ namespace dota2LobbyGenerator.Data.Interfaces
         Task<List<Hero>> GetAll();
         Task<Hero> GetById(int id);
         Task Update(Hero hero);
-        Task Delete(Hero hero);        
+        Task Delete(Hero hero);   
+        Task<List<Hero>> GetHeroesByAtribute(string atribute);
     }
 }
