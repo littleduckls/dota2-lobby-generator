@@ -1,4 +1,8 @@
 using dota2LobbyGenerator.Data;
+using dota2LobbyGenerator.Data.Interfaces;
+using dota2LobbyGenerator.Data.Repos;
+using dota2LobbyGenerator.Services;
+using dota2LobbyGenerator.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IHeroRepository, HeroRepository>();
+builder.Services.AddScoped<IHeroService, HeroService>();
 
 var app = builder.Build();
 

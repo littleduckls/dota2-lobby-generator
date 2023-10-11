@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wqAzMsHbPZv+w4N5PyZLc9UPSOhRdYji7XiWgxc8Vrg=",
+  "Source": "dota2LobbyGenerator",
+  "BasePath": "_content/dota2LobbyGenerator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
